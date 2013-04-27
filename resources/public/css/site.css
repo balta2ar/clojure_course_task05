@@ -4,6 +4,10 @@ body {
     font: 14px Verdana,Arial,Helvetica,sans-serif;
 }
 
+.message {
+    margin: 10px 0px;
+}
+
 /* Custom container */
 .container {
     margin: 0 auto;

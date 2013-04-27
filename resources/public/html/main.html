@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Template &middot; Bootstrap</title>
+    <title>Pasta!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Paste your images described in words">
+    <meta name="author" content="Yuri Bochkarev">
 
     <!-- Le styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -24,44 +24,74 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <span id="script"></span>
+    <div class="navbar">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a href="/" class="brand">Pasta!</a>
 
-    <div class="container">
-      <div id="page-header" class="row-fluid">
-      </div>
+	  <ul class="nav">
+	    <li class="divider-vertical"></li>
 
-      <div id="container">
-
-
-	<!-- Jumbotron -->
-	<div id="grey-content">
-	</div>
-
-	<!-- Example row of columns -->
-	<div class="row-fluid" style="min-height:400px;">
-          <div class="span12">	    
-	    <div id="task-item-container">
-	    </div>
-          </div>
+	    <form class="navbar-form pull-left">
+	      <input id="message-text" type="text"
+			 placeholder="Enter one or more words"
+			 class="navbar-text span4"></input>
+	      <a class="btn" id="add-button">Paste</a>
+	      <a class="btn" id="reset-button">Reset</a>
+	    </form>
+	  </ul>
 	  
-	</div>
-
-      </div>
-    </div> <!-- /container -->
-
-
-    <div class="footer">
-      <div class="container">
-	<div class="row-fluid">
-	  <div class="span12">
-	    <p>&copy; Company 2013</p>
-	    <br/><br/>
-	  </div>
+	  <ul class="nav pull-right">
+	    <li><a href="https://github.com/balta2ar/clojure_course_task05">GitHub</a></li>
+	  </ul>
 	</div>
       </div>
     </div>
 
-    <div id="dialog-holder"></div>
+    <div class="container">
+      <ul class="thumbnails">
+	<div id="message-stack">
+
+<!--
+	  <div id="single-message" class="message">
+	    <div class="row">
+	      <div class="span2">
+		<p>Tree</p>
+	      </div>
+	      <div class="span8">
+		<a class="thumbnail">
+		  <img class="polaroid" src="http://tree.jpg.to/small+r"/>
+		</a>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div id="single-message" class="message">
+	    <div class="row">
+	      <div class="span2">
+		<p>Bee</p>
+	      </div>
+	      <div class="span8">
+		<a class="thumbnail">
+		  <img class="polaroid" src="http://bee.jpg.to/small+r"/>
+		</a>
+	      </div>
+	    </div>
+	  </div>
+-->
+
+	</div>
+      </ul>
+
+      <hr>
+
+      <footer>
+	<p>&copy; Yuri Bochkarev 2013</p>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="/js/main.js"></script>
 
     <!-- Le javascript
 	 ================================================== -->

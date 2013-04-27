@@ -1,4 +1,4 @@
-(defproject hire-doer "0.1.0-SNAPSHOT"
+(defproject pasta "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.5.1"]
@@ -11,7 +11,7 @@
                  [com.cemerick/piggieback "0.0.4"]]
   :plugins [[lein-ring "0.8.3"]
             [lein-cljsbuild "0.3.0"]]
-  :ring {:handler hire-doer.handler/app}
+  :ring {:handler pasta.handler/app}
   :profiles
   {:dev {:dependencies [[ring-mock "0.1.3"]]}}
 
@@ -35,18 +35,17 @@
     
 
 
-    {:source-paths ["src/cljs" "test-cljs"],
-     :id "test",
-     :compiler
-     {:pretty-print true,
-      :output-dir ".clojurescript-output-test",
-      :output-to "resources/public/js/test.js",
-      :optimizations :whitespace}}],
+    ;; {:source-paths ["src/cljs" "test-cljs"],
+    ;;  :id "test",
+    ;;  :compiler
+    ;;  {:pretty-print true,
+    ;;   :output-dir ".clojurescript-output-test",
+    ;;   :output-to "resources/public/js/test.js",
+    ;;   :optimizations :whitespace}}
+    ],
    :test-commands
    {"unit"
     ["phantomjs"
      "phantomjs/unit-test.js"
      "http://localhost:3000/html/test.html"]}}
-  :war {:name "hiredoer.war"})
-
-
+  :war {:name "pasta.war"})
