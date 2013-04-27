@@ -6,6 +6,12 @@
   (:use [jayq.core :only [$ css inner]]))
 
 ;;
+;; Consts
+;;
+
+(def enter-key-code 13)
+
+;;
 ;; Snippets
 ;;
 
@@ -42,12 +48,21 @@
   (em/at js/document
          ["#message-stack"] (em/content (str ""))))
 
+(defn ^:export paste []
+  (process-message (get-message)))
+
+(defn ^:export handle-keypress [event]
+  (when (= enter-key-code (.-keyCode event))
+    (paste)
+    (.preventDefault event)))
+
 ;;
 ;; Actions
 ;;
 
 (em/defaction setup []
-  ["#add-button"] (em/listen :click #(process-message (get-message)))
+  ["#message-text"] (em/listen :keypress handle-keypress)
+  ["#add-button"] (em/listen :click #(paste))
   ["#reset-button"] (em/listen :click #(reset-all)))
 
 (set! (.-onload js/window) setup)
