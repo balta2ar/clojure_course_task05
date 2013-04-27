@@ -1,10 +1,10 @@
-(ns hire-doer.db)
+(ns pasta.db)
 
 (def default-conn {:classname "com.mysql.jdbc.Driver"
                    :subprotocol "mysql"
-                   :user "hiredoer"
-                   :password "hiredoer"
-                   :subname "//127.0.0.1:3306/hiredoer?useUnicode=true&characterEncoding=utf8"
+                   :user "pasta"
+                   :password "pasta"
+                   :subname "//127.0.0.1:3306/pasta?useUnicode=true&characterEncoding=utf8"
                    :delimiters "`"})
 
 ;; (def default-conn {:classname "com.mysql.jdbc.Driver"
